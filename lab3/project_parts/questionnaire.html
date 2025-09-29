@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+</head>
+<body>
+    <header>
+        <h2 align="center">Анкета</h2>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Особисті дані</legend>
+                <div>
+                    <label for="name">Ім'я:</label>
+                    <input id="name" name="name" type="text" placeholder="Ваше ім'я" required tabindex="1">
+                </div>
+
+                <div>
+                    <label for="about_yourself">Опис:</label>
+                    <textarea id="about_yourself" name="about" placeholder="Коротко про себе" tabindex="2"></textarea>
+                </div>
+
+                <div>
+                    <label for="password">Пароль:</label>
+                    <input id="password" name="password" type="password" 
+                           placeholder="6 символів, літера і цифра"
+                           pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6}$"
+                           required tabindex="3">
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="email" 
+                           placeholder="example@gmail.com" 
+                           autocomplete="off"
+                           pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" 
+                           required tabindex="4">
+                </div>
+
+                <div>
+                    <label for="tel">Телефон:</label>
+                    <input id="tel" name="tel" type="tel" 
+                           placeholder="+380XXXXXXXXX"
+                           pattern="^\+380\d{9}$" 
+                           required tabindex="5">
+                </div>
+
+                <div>
+                    <label for="date">Дата народження:</label>
+                    <input id="date" name="birthdate" type="date" required tabindex="6">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Стать</legend>
+                <input type="radio" id="men" name="sex" value="male" tabindex="7">
+                <label for="men">Чоловік</label>
+                <input type="radio" id="girl" name="sex" value="female" checked tabindex="8">
+                <label for="girl">Жінка</label>
+                <input type="radio" id="other" name="sex" value="other" tabindex="9">
+                <label for="other">Інше</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Мови</legend>
+                <p>Рівень англійської:</p>
+                <input type="checkbox" id="check1" name="english" value="A1" tabindex="10">
+                <label for="check1">A1</label>
+                <input type="checkbox" id="check2" name="english" value="A2" tabindex="11">
+                <label for="check2">A2</label>
+                <input type="checkbox" id="check3" name="english" value="B1" tabindex="12">
+                <label for="check3">B1</label>
+                <input type="checkbox" id="check4" name="english" value="B2" tabindex="13">
+                <label for="check4">B2</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Освіта</legend>
+                <label for="education">Освітній рівень:</label>
+                <select id="education" name="education" tabindex="14">
+                    <option value="school">Школа</option>
+                    <option value="college">Коледж</option>
+                    <option value="bachelor" selected>Бакалавр</option>
+                    <option value="master">Магістр</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Хобі</legend>
+                <label for="hobbies">Виберіть хобі:</label>
+                <select id="hobbies" name="hobbies" multiple size="6" tabindex="15">
+                    <option value="reading">Читання</option>
+                    <option value="music">Музика</option>
+                    <option value="sport">Спорт</option>
+                    <option value="travel">Подорожі</option>
+                    <option value="games">Ігри</option>
+                    <option value="coding">Програмування</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Улюблені страви</legend>
+                <select name="food" tabindex="16">
+                    <optgroup label="Фрукти">
+                        <option value="apple">Яблуко</option>
+                        <option value="banana">Банан</option>
+                        <option value="orange">Апельсин</option>
+                    </optgroup>
+                    <optgroup label="Овочі">
+                        <option value="tomato">Помідор</option>
+                        <option value="cucumber">Огірок</option>
+                        <option value="carrot">Морква</option>
+                    </optgroup>
+                    <optgroup label="М'ясо">
+                        <option value="chicken">Курка</option>
+                        <option value="beef">Яловичина</option>
+                        <option value="pork">Свинина</option>
+                    </optgroup>
+                    <optgroup label="Напої">
+                        <option value="coffee">Кава</option>
+                        <option value="tea">Чай</option>
+                        <option value="juice">Сік</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Ваше місто</legend>
+                <label for="city">Оберіть або введіть:</label>
+                <input list="cities" id="city" name="city" tabindex="17">
+                <datalist id="cities">
+                    <option value="Київ">
+                    <option value="Львів">
+                    <option value="Одеса">
+                    <option value="Харків">
+                    <option value="Дніпро">
+                </datalist>
+            </fieldset>
+
+            <fieldset>
+                <legend>Додаткове</legend>
+                <label for="files">Завантажте аудіофайли:</label>
+                <input type="file" id="files" name="files" accept="audio/*" multiple tabindex="18">
+            </fieldset>
+
+            <div>
+                <button type="submit" tabindex="19">Відправити</button>
+                <button type="reset" tabindex="20">Очистити</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
