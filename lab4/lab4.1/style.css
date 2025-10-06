@@ -1,0 +1,44 @@
+* {
+    font-family: Arial;
+    font-size: 20px;
+    word-spacing: 40px;
+}
+
+h3 {
+    color: green;
+    text-align: center;
+}
+
+div {
+    text-align: justify;
+}
+
+.first_lorem {
+    color: red;
+    white-space: nowrap;
+}
+
+#second_lorem {
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+.second_lorem {
+    text-shadow: 5px -5px 3px black;
+}
+
+div.second_lorem {
+    word-spacing: 50px;
+    letter-spacing: 30px;
+}
+
+.third_lorem {
+    color: red;
+}
+
+.fourth_lorem {
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
