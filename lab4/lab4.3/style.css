@@ -1,0 +1,27 @@
+a {
+    color: purple;
+}
+
+.main_menu {
+    color: green;
+}
+
+.last_list {
+    list-style-image: url(/lab4/lab4.3/img/li.svg);
+}
+
+.second_list {
+    list-style: square;
+}
+
+ul ul {
+    list-style: none;
+}
+
+ul ul .second_list .last_list{
+    text-decoration: inherit;
+}
+
+ol {
+    text-align: justify;
+}
