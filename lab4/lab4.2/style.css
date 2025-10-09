@@ -1,0 +1,32 @@
+* {
+    text-align: center;
+}
+
+div {
+    line-height: 50%;
+}
+
+.bold_text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.under_line {
+    text-decoration: underline;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+#background {
+    background-color: yellow;
+}
+
+#color {
+    color: red;
+}
+
+.italic {
+    font-style: italic;
+}
