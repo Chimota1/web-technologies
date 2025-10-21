@@ -4,21 +4,6 @@
     padding: 20px;
 }
 
-main {
-    clear: both;
-    column-count: 3;
-    column-gap: 35px;
-    column-rule: 5px dotted red;
-}
-
-.columns {
-    column-width: 380px;
-}
-
-main img {
-    width: 200px;
-}
-
 .logo {
     float: left;
 }
@@ -47,6 +32,21 @@ main img {
     background-color: burlywood;
     float: left;
     margin: 5px;
+}
+
+main {
+    clear: both;
+    column-count: 3;
+    column-gap: 35px;
+    column-rule: 5px dotted red;
+}
+
+.columns {
+    column-width: 380px;
+}
+
+main img {
+    width: 200px;
 }
 
 #img-first-column {
