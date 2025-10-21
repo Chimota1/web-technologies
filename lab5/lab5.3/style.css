@@ -1,0 +1,60 @@
+header {
+    background-color: coral;
+}
+
+header h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.user-data {
+    background-color: yellow;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.user-data #about_yourself {
+    resize: none;
+}
+
+.user-sex {
+    background-color: aqua;
+    font-weight: bolder;
+}
+
+.languages {
+   background-color: darkgreen;
+   color: white;
+}
+
+.languages > legend {
+    color: brown;
+    font-size: large;
+    font-weight: bold;
+}
+
+.user-education {
+    background-color: mediumvioletred;
+}
+
+.user-education select {
+    background-color: aqua;
+}
+
+
+.user-hobby {
+    font-size: xx-small;
+    text-decoration: solid;
+}
+
+.user-hobby #hobbies {
+    font-size: small;
+}
+
+.user-food {
+    text-align: center;
+}
+
+.user-food select {
+    background-color: blue;
+}
