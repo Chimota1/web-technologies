@@ -1,0 +1,49 @@
+.block-1_1 {
+    background-color: green;
+    width: 140px;
+    height: 50px;
+    text-align: center;
+    border: 5px solid black;
+}
+
+.block-1_1:hover + .block-2_1 {
+    visibility: visible;
+}
+.block-2_1{
+    background-color: lightblue;
+    color: white;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    visibility: hidden;
+    position: relative;
+    left: 170px;
+    bottom: 80px;
+}
+
+.block-1_2 {
+    background-color: green;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    border: 5px solid black;
+    position: relative;
+    left: 167px;
+    bottom: 70px;
+}
+
+.block-1_2:hover + .block-2_2 {
+    visibility: visible;
+}
+
+
+.block-2_2{
+    background-color: lightblue;
+    text-align: center;
+    color: white;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    bottom: 220px;
+    visibility: hidden;
+}
