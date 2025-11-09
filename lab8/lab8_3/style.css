@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 0;
+}
+
+.header {
+    color: rgb(100, 100, 100);
+    height: 300px;
+}
+
+.header__city {
+    font-size: 48px;
+    font-weight: bold;
+    color: rgb(61, 61, 61);
+}
+
+.header__date {
+    font-size: 24px;
+    color: rgb(120, 120, 120);
+}
+
+.header__overcast {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.header__overcast-title {
+    font-size: 24px;
+    color: rgb(120, 120, 120);
+}
+
+.header__overcast-weathear-icon{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.header__overcast-weathear-icon__image {
+    width: 100px;
+    height: 100px;
+}
+
+.header__overcast-weathear-icon__number{
+    font-size: 48px;
+    font-weight: bold;
+    color: rgb(61, 61, 61);
+}
+
+.header__overcast-weathear-icon__number sup {
+    font-size: 24px;
+    color: rgb(120, 120, 120);
+}
+
+.header__overcast-weathear-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.header__overcast-detail__item {
+    font-size: 18px;
+    color: rgb(120, 120, 120);
+}
+
+.header__overcast-detail__item span {
+    color: rgb(61, 61, 61);
+}
+
+.forecast {
+    display: flex;
+    flex-direction: column;
+}
+
+.forecast__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.forecast__content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(200, 200, 200);
+}
+
+.forecast__content::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(200, 200, 200);
+}
+
+.forecast__content__day {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(61, 61, 61);
+}
+
+.forecast__content__icon {
+    width: 100px;
+    height: 100px;
+}
+
+.forecast__content__temperature {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.forecast__content__temputre-in-day {
+    font-size: 24px;
+    color: rgb(61, 61, 61);
+}
+
+.forecast__content__temputre-in-night {
+    font-size: 18px;
+    color: rgb(120, 120, 120);
+}
+
+.forecast__content__pollen {
+    font-size: 24px;
+    color: rgb(61, 61, 61);
+}
+
+.forecast__content__pollen span {
+    color: rgb(120, 120, 120);
+}
