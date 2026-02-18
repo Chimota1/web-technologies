@@ -1,8 +1,8 @@
 let message = document.getElementById("message");
-let button = document.getElementById("button");
+let studentName = document.getElementById("student_name");
 
-function showMessage(message) {
-    message.innerText = "Hello, World!";
+function showMessage(el) {
+    el.innerText = "Hello, World!";
 };
 
 function showStudentName(){
@@ -11,4 +11,4 @@ function showStudentName(){
 
 showMessage(message);
 
-button.addEventListener("mouseover", showStudentName);
+studentName.addEventListener("mouseover", showStudentName);
