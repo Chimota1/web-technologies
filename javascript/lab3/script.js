@@ -1,7 +1,7 @@
 // first task
 function sumToFifty(el){
     let count = 0;
-    while (count < 50){
+    while (count <= 50){
         el = el + count;
         count++;
     }
@@ -25,33 +25,49 @@ function factorial(n){
 console.log(factorial(5));
 
 // third task
-function seson(month){
-    switch (month){
+function month(num){
+    switch (num){
         case 1:
+            return "January";
+            break;
         case 2:
-        case 12:
-            return "Winter";
+            return "February";
             break;
         case 3:
+            return "March";
+            break;
         case 4:
+            return "April";
+            break;
         case 5:
-            return "Spring";
+            return "May";
             break;
         case 6:
+            return "June";
+            break;
         case 7:
+            return "July";
+            break;
         case 8:
-            return "Summer";
+            return "August";
             break;
         case 9:
+            return "September";
+            break;
         case 10:
+            return "October";
+            break;
         case 11:
-            return "Autumn";
+            return "November";
+            break;
+        case 12:
+            return "December";
             break;
         default:
-            return "Incorrect month number";
+            return "Invalid month number";
     }
 }
-console.log(seson(11));
+console.log(month(11));
 
 // fourth task
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
