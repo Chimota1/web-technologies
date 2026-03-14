@@ -25,7 +25,7 @@ function factorial(n){
 console.log(factorial(5));
 
 // third task
-function month(num){
+function getMonth(num){
     switch (num){
         case 1:
             return "January";
@@ -71,23 +71,24 @@ console.log(month(11));
 
 // fourth task
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-function addEven(arr){
+function calcEven(arr){
     let sum = 0;
     for (let i = 0; i < arr.length; i++){
         if (arr[i] % 2 === 0){
-            sum = sum + arr[i];
+            sum += arr[i];
         }
     }
     return sum;
 }
-console.log(addEven(arr));
+console.log(calcEven(arr));
 
 // fifth task
-const vowels = ["a", "e", "i", "o", "u","A", "E", "I", "O", "U"];
+const vowels = ['a', 'e', 'i', 'o', 'u','A', 'E', 'I', 'O', 'U'];
 const countVowels = (str) => {
     let count = 0;
-    for (let i = 0; i < str.length; i++){
-        if (vowels.includes(str[i])){
+    const _str = str.toLowerCase();
+    for (let i = 0; i < _str.length; i++){
+        if (vowels.includes(_str[i])){
             count++;
         }
     }
