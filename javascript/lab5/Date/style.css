@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clock {
+    display: flex;
+    gap: -10px;
+    font-size: 50px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    justify-content: center;
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+}
+
+.timer-display {
+    display: flex;
+    gap: -10px;
+    font-size: 50px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.timer-button {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#start-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#month-input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    width: 350px;
+}
+
+.day-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.birthday-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#bday-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#bday-result {
+    font-size: 22px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-weight: bold;
+}

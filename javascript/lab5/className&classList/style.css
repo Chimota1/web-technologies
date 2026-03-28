@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blub-buttons{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.blub-buttons button{
+    padding: 10px 20px;
+    background-color: darkorange;
+    border-color: chocolate;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.on-off-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.on-off-buttons button{
+    padding: 10px 20px;
+    background-color: indigo;
+    border-color: black;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.images img{
+    display: none;
+}
+
+.images img.active{
+    display: block;
+}

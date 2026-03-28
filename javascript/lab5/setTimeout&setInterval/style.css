@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.traffic-light {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 300px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.traffic-light img {
+    display: none;
+}
+
+.traffic-light img.active {
+    display: block;
+}
+
+.buttons-control {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 50px;
+}
+
+#change-red, #change-yellow, #change-green, #next-btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: indigo;
+    border-color: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#output {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    color: reds;
+}
