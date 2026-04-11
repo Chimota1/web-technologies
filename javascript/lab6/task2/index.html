@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>To-do List</h1>
+    </header>
+    <div class="wrapper">
+        <main>
+            <div class="manipulate-btns">
+                <button id="add-btn">Add Task</button>
+                <button id="sort-btn">Sort Tasks</button>
+            </div>
+            <div class="sort-btns">
+                <button id="sort-by-date">За датою додавання</button>
+                <button id="sort-by-status">За виконанням</button>
+                <button id="sort-by-update">За датою оновлення</button>
+                <button id="reset-sort">Скинути</button>
+            </div>
+            <div class="tasks-container">
+                <h3>Tasks:</h3>
+                <p id="list-empty__text">Список задач відсутній, додайте нову задачу.</p>
+                <ul class="tasks-list">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <div class="snackbar" role="alert">
+        <span class="snackbar__text">текст сповіщення</span>
+    </div>
+    <div class="modal-add">
+        <div class="modal-add__content" role="dialog">
+            <h2 class="modal-add__title">Add Task</h2>
+            <input id="add-input" class="modal-add__input" type="text" placeholder="Enter task name" required>
+            <button id="save-btn" class="modal-add__save-btn">Save</button>
+        </div>
+    </div>
+    <div class="modal-change">
+        <div class="modal-change__content" role="dialog">
+            <h2 class="modal-change__title">Edit Task</h2>
+            <input id="edit-input" class="modal-change__input" type="text" placeholder="Enter new task name" required>
+            <button id="update-btn" class="modal-change__update-btn">Update</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

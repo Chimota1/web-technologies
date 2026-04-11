@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>lab6</title>
 </head>
 <body>
+    <header>
+        <p>Загальна сума: <span id="total-amount">0</span> грн</p>
+    </header>
+    <div class="wrapper">
+        <main>
+            <div class="control-panel">
+                <div class="filter">
+                    <button id="filter-button" class="control-panel__button">Фільтрувати <img class="control-panel__button__icon" src="./img/filter.png" alt="filter-icon" id="filter-icon"></button>
+                    <button id="reset-filter-button" class="control-panel__button">X</button>
+                </div>
+                <div class="category-set">
+                    <button id="category-set__equipment" class="category-set__btns">Техніка</button>
+                    <button id="category-set__clothing" class="category-set__btns">Одяг</button>
+                    <button id="category-set__food" class="category-set__btns">Продукти</button>
+                </div>
+                <div class="sort-by">
+                    <button id="sort-by-price" class="control-panel__button">За ціною</button>
+                    <button id="sort-by-createdAt" class="control-panel__button">За датою створення</button>
+                    <button id="sort-by-updatedAt" class="control-panel__button">За датою оновлення</button>
+                </div>
+                <div class="sort">
+                    <button id="sort-button" class="control-panel__button">Сортувати <img class="control-panel__button__icon" src="./img/sort.png" alt="sort-icon" id="sort-icon"></button>
+                    <button id="reset-sort-button" class="control-panel__button">X</button>
+                </div>
+            </div>
+            <div class="list-empty">
+                <img class="list-empty__icon" src="./img/sad-face-icon.svg" alt="sad-face">
+                <span id="list-empty__text">Наразі список товарів пустий. Додайте новий товар.</span>
+            </div>
+            <div class="product-list">
+            </div>
+            <div class="add-button">
+                <button id="add-button">Додати товар</button>
+            </div>
+        </main>
+    </div>
+    <div class="snackbar" role="alert">
+        <span class="snackar__text">текст сповіщення</span>
+    </div>
+    <div class="modal-add" role="dialog">
+        <div class="modal-add__content">
+            <h2 class="modal-add__title">Додайте новий товар</h2>
+            <form id="add-product__form" class="modal-add__form">
+                <input class="add-product__input" type="url" id="product-image-input" placeholder="URL зображення товару" required>
+                <input class="add-product__input" type="text" id="product-name-input" placeholder="Назва товару" required>
+                <input class="add-product__input" type="number" id="product-price-input" placeholder="Ціна товару" required>
+                <input class="add-product__input" type="text" id="product-category-input" placeholder="Категорія товару" required>
+                <button type="submit" class="modal-add__submit">Додати</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal-change" role="dialog">
+        <div class="modal-change__content">
+            <h2 class="modal-change__title">Редагуйте товар</h2>
+            <form id="change-product__form" class="modal-change__form">
+                <input class="change-product__input" type="url" id="change-product-image-input" placeholder="URL зображення товару" required>
+                <input class="change-product__input" type="text" id="change-product-name-input" placeholder="Назва товару" required>
+                <input class="change-product__input" type="number" id="change-product-price-input" placeholder="Ціна товару" required>
+                <input class="change-product__input" type="text" id="change-product-category-input" placeholder="Категорія товару" required>
+                <button type="submit" class="modal-change__submit">Зберегти</button>
+            </form>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

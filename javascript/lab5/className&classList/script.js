@@ -66,7 +66,7 @@ offButton.addEventListener('click', () => {
     }
 });
 
-brightness.addEventListener('click', () => {
+function changeBrightness() {
     let value = brightness.value;
     if (defaultBlubOn.classList.contains('active')) {
         value = prompt('Enter brightness value (0-100):');
@@ -79,7 +79,9 @@ brightness.addEventListener('click', () => {
         value = prompt('Enter brightness value (0-100):');
         ledBlubOn.style.filter = `brightness(${value}%)`;
     }
-});
+};
+
+brightness.addEventListener('click', changeBrightness);
 
 setInterval(() => {
     if (defaultBlubOn.classList.contains('active')) {

@@ -1,0 +1,488 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: rgb(250, 235, 200);
+}
+
+header{
+    background-color: rgb(240, 200, 150);
+    padding: 10px;
+    text-align: center;
+}
+
+button:active{
+    transform: scale(0.98);
+}
+
+.manipulate-btns{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.manipulate-btns button{
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(240, 200, 150);
+    border-radius: 5px;
+}
+
+#add-btn{
+    background-color: rgb(100, 200, 150);
+    color: white;
+}
+
+#sort-btn{
+    background-color: rgb(200, 100, 150);
+    color: white;
+}
+
+#add-btn:hover{
+    background-color: rgb(80, 180, 130);
+}
+
+#sort-btn:hover{
+    background-color: rgb(180, 80, 130);
+}
+
+.sort-btns{
+    display: none;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.sort-btns button{
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.sort-btns.show{
+    display: flex;
+    animation: showSortContainer 0.7s ease;
+}
+
+.sort-btns.hide{
+    animation: hideSortContainer 0.7s ease;
+}
+
+#sort-by-date{
+    background-color: rgb(100, 200, 150);
+    color: white;
+}
+
+#sort-by-status{
+    background-color: rgb(200, 100, 150);
+    color: white;
+}
+
+#sort-by-update{
+    background-color: rgb(150, 150, 150);
+    color: white;
+}
+
+#reset-sort{
+    background-color: rgb(220, 80, 80);
+    color: white;
+}
+
+.tasks-container{
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 75%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+}
+
+.tasks-container h3{
+    color: rgb(100, 200, 150);
+}
+
+.tasks-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list-item{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.list-item.show{
+    animation: showListItem 0.7s ease;
+}
+
+.list-item.hide{
+    animation: hideListItem 0.7s ease;
+}
+
+.list-item__left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list-item__btns{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.list-item__btns button{
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.delete-btn{
+    background-color: rgb(220, 80, 80);
+    color: white;
+}
+.edit-btn{
+    background-color: rgb(160, 160, 160);
+    color: white;
+}
+.delete-btn:hover{
+    background-color: rgb(190, 55, 55);
+}
+.edit-btn:hover{
+    background-color: rgb(130, 130, 130);
+}
+
+.checkbox-element{
+    width: 17px;
+    height: 17px;
+}
+
+.snackbar{
+    position: fixed;
+    bottom: 30px;
+    left:77%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.snackbar.show{
+    animation: showSnackbar 0.3s ease forwards;
+}
+
+.snackbar.hide{
+    animation: hideSnackbar 0.3s ease forwards;
+}
+
+.modal-add{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-add__content{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+.modal-add__title{
+    text-align: center;
+}
+
+.modal-add__input{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+}
+
+.modal-add__save-btn{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(100, 200, 150);
+    color: white;
+    border-radius: 5px;
+}
+
+.modal-add__save-btn:hover{
+    background-color: rgb(80, 180, 130);
+}
+
+.modal-add.show{
+    animation: showModalAdd 0.3s ease forwards;
+}
+
+.modal-add.hide{
+    animation: hideModalAdd 0.3s ease forwards;
+}
+
+.modal-change{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-change__content{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+.modal-change__title{
+    text-align: center;
+}
+
+.modal-change__input{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+}
+
+.modal-change__update-btn{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(160, 160, 160);
+    color: white;
+    border-radius: 5px;
+}
+
+.modal-change__update-btn:hover{
+    background-color: rgb(130, 130, 130);
+}
+
+.modal-change.show{
+    animation: showModalChange 0.3s ease forwards;
+}
+
+.modal-change.hide{
+    animation: hideModalChange 0.3s ease forwards;
+}
+
+@keyframes showListItem {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes hideListItem {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes showSnackbar {
+    from {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hideSnackbar {
+    from {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes showSortContainer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes hideSortContainer {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes showModalAdd {
+    from {
+        opacity: 0;
+        visibility: hidden;}
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+
+@keyframes hideModalAdd {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes showModalChange {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+
+@keyframes hideModalChange {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .tasks-container{
+        width: 100%;
+        height: auto;
+    }
+
+    .manipulate-btns{
+        align-items: center;
+        gap: 10px;
+    }
+
+    .manipulate-btns button{
+        width: 50%;
+    }
+
+    .sort-btns{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sort-btns button{
+        width: 80%;
+    }
+
+    .modal-add__content, .modal-change__content{
+        width: 90%;
+    }
+
+    .list-item{
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 18px;
+    }
+
+    .list-item__btns{
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .list-item__btns button{
+        width: 100%;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+
+    .snackbar{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
