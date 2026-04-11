@@ -98,43 +98,34 @@ Calendar();
 
 function Birthday() {
     setInterval(() => {
-        // Якщо дату ще не обрали - нічого не рахуємо
         if (!bdayInput.value) return;
 
         let now = new Date();
         let bday = new Date(bdayInput.value);
 
-        // Встановлюємо рік дня народження на поточний рік
         bday.setFullYear(now.getFullYear());
 
-        // Якщо день народження вже був у цьому році, рахуємо до наступного
         if (bday < now) {
             bday.setFullYear(now.getFullYear() + 1);
         }
 
-        // Вираховуємо різницю в місяцях та днях
         let mDiff = bday.getMonth() - now.getMonth();
         let dDiff = bday.getDate() - now.getDate();
 
-        // Якщо днів вийшло менше нуля, позичаємо 1 місяць
         if (dDiff < 0) {
             mDiff--;
-            // Дізнаємося, скільки днів було в попередньому місяці
             let prevMonthDays = new Date(bday.getFullYear(), bday.getMonth(), 0).getDate();
             dDiff += prevMonthDays;
         }
 
-        // Якщо місяців вийшло менше нуля, позичаємо 1 рік (12 місяців)
         if (mDiff < 0) {
             mDiff += 12;
         }
 
-        // Оскільки день народження починається о 00:00, просто віднімаємо поточний час від кінця доби
         let hDiff = 23 - now.getHours();
         let minDiff = 59 - now.getMinutes();
         let secDiff = 59 - now.getSeconds();
 
-        // Виводимо результат
         bdayResult.textContent =
             mDiff + " місяців, " +
             dDiff + " днів, " +
