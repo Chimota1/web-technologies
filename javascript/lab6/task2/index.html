@@ -25,28 +25,29 @@
             <div class="tasks-container">
                 <h3>Tasks:</h3>
                 <p id="list-empty__text">Список задач відсутній, додайте нову задачу.</p>
-                <ul class="tasks-list">
-                        </div>
-                    </li>
-                </ul>
+                <ul class="tasks-list"></ul>
             </div>
         </main>
     </div>
     <div class="snackbar" role="alert">
         <span class="snackbar__text">текст сповіщення</span>
     </div>
-    <div class="modal-add">
-        <div class="modal-add__content" role="dialog">
+    <div class="modal-add" role="dialog" aria-modal="true">
+        <div class="modal-add__content">
             <h2 class="modal-add__title">Add Task</h2>
-            <input id="add-input" class="modal-add__input" type="text" placeholder="Enter task name" required>
-            <button id="save-btn" class="modal-add__save-btn">Save</button>
+            <form id="add-form">
+                <input id="add-input" class="modal-add__input" type="text" placeholder="Enter task name" required>
+                <button type="submit" id="save-btn" class="modal-add__save-btn">Save</button>
+            </form>
         </div>
     </div>
-    <div class="modal-change">
-        <div class="modal-change__content" role="dialog">
+    <div class="modal-change" role="dialog" aria-modal="true">
+        <div class="modal-change__content">
             <h2 class="modal-change__title">Edit Task</h2>
-            <input id="edit-input" class="modal-change__input" type="text" placeholder="Enter new task name" required>
-            <button id="update-btn" class="modal-change__update-btn">Update</button>
+            <form id="edit-form">
+                <input id="edit-input" class="modal-change__input" type="text" placeholder="Enter new task name" required>
+                <button type="submit" id="update-btn" class="modal-change__update-btn">Update</button>
+            </form>
         </div>
     </div>
     <script src="./script.js"></script>

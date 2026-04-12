@@ -9,8 +9,6 @@ const snackbar = document.querySelector('.snackbar');
 const snackbarText = document.querySelector('.snackbar__text');
 const modalAdd = document.querySelector('.modal-add');
 const modalChange = document.querySelector('.modal-change');
-const saveBtn = document.getElementById('save-btn');
-const updateBtn = document.getElementById('update-btn');
 const sortContainer = document.querySelector('.sort-btns');
 const sortBtn = document.getElementById('sort-btn');
 const sortByDateBtn = document.getElementById('sort-by-date');
@@ -21,6 +19,7 @@ const resetSortBtn = document.getElementById('reset-sort');
 
 let tasks = [];
 let listItem = null;
+let currentEditId = null;
 
 function generateID(){
     return tasks.length === 0 ? 1 : Math.max(...tasks.map(t => t.id)) + 1;
@@ -43,10 +42,10 @@ function createTaskCard(task) {
         listItem.classList.add('show');
         const editBtn = card.querySelector('.edit-btn');
         editBtn.addEventListener('click', () => {
+            currentEditId = task.id;
             editNameInput.value = task.name;
             modalChange.classList.remove('hide');
             modalChange.classList.add('show');
-            updateBtn.onclick = () => EditTask(task.id, editNameInput.value);
         });
         const deleteBtn = card.querySelector('.delete-btn');
         deleteBtn.addEventListener('click', () => {
@@ -104,9 +103,9 @@ addButton.addEventListener('click', () => {
     modalAdd.classList.add('show');
 });
 
-saveBtn.addEventListener('click', addTask);
+document.getElementById('add-form').addEventListener('submit', addTask);
 
-const EditTask = (taskId, newName) => {
+const editTask = (taskId, newName) => {
     tasks = tasks.map(task => {
         if (task.id === taskId) {
             return { ...task,
@@ -121,6 +120,11 @@ const EditTask = (taskId, newName) => {
     modalChange.classList.remove('show');
     modalChange.classList.add('hide');
 }
+
+document.getElementById('edit-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    editTask(currentEditId, editNameInput.value);
+});
 
 const deleteTask = (taskId) => {
     const taskToDelete = tasks.find(task => task.id === taskId);
