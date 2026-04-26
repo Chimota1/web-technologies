@@ -29,7 +29,11 @@ let snackbarText = document.querySelector('.snackar__text');
 let listEmptyText = document.getElementById('list-empty__text');
 
 let currentEditProductId = null;
-let products = [];
+let products = [
+    { id: 1, name: 'Ноутбук', price: 25000, category: 'Техніка', image: 'https://api.e-server.com.ua/storage/152981/rs/U0482057_big___rs_1200_1200.jpg', createdAt: new Date() },
+    { id: 2, name: 'Куртка', price: 1500, category: 'Одяг', image: 'https://www.gorgany.com/media/catalog/product/t/h/the_north_face_m_diablo_down_2_0_jacket_estate_blue_black_heather_7_25_3e46.jpg?store=ukrainian&image-type=image&format=webp', createdAt: new Date() },
+    { id: 3, name: 'Хліб', price: 50, category: 'Продукти', image: 'https://bohlib.com.ua/wp-content/uploads/2024/08/pro-khlib-yakist-tradytsii-ta-maysternist-u-kozhnomu-shmatochku.jpg', createdAt: new Date() },
+];
 
 function generateId() {
     return products.length === 0 ? 1 : Math.max(...products.map(p => p.id)) + 1;
@@ -221,3 +225,8 @@ const resetSorting = () => {
 }
 
 resetSortButton.addEventListener('click', resetSorting);
+
+renderAllProducts();
+updateTotalAmount();
+listEmpty.classList.add('hide');
+productList.classList.add('show');
